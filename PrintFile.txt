@@ -1,0 +1,19 @@
+1. Docker url: https://hub.docker.com/r/bmk77/homework2
+
+
+3. public class helloWorld {
+
+    public static void main(String[] args){
+    
+        System.out.println("Hello Worlds Docker Man here");
+        
+    }
+}
+    
+
+#base image
+FROM openjdk:8
+COPY . /src/java
+WORKDIR /src/java
+RUN ["javac", "helloWorld.java"]
+ENTRYPOINT ["java", "helloWorld"]
