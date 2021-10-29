@@ -1,6 +1,6 @@
-FROM openjdk:8
-COPY . C:\Users\bmack\Desktop\dock\Project
-WORKDIR C:\Users\bmack\Desktop\dock\Project
+FROM openjdk:7
+COPY . /src/java
+WORKDIR /src/java
 
 RUN javac run.java
 CMD ["java", "run"]
