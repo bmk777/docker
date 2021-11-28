@@ -1,0 +1,44 @@
+In shell if you want to test you program you can just do python run.py
+MAKE SURE TO SET THE ENV VARIABLES BEFORE STARTING
+to buildthe docker enter  Get-Content Dockerfile | docker build -t bmk77/workingpy .
+to run execute docker run -ti -e GOOGLE_APPLICATION_CREDENTIALS=auth/finalproject-330320-52c8beab0c57.json bmk77/workingpy
+
+
+
+What we did
+	We succsessfully got our program to upload files to the cluster from our machine, however when its run inside of a container it doesnt work
+		I think this has to do with how we cant read from our machine so ill read from a github
+	We succsessfully containerized and verified our container with gcp from local and docker containerized
+	We succsessfully got the invertedindex job to work on our cluster by using the UI from google.
+	We succsessfully switched to a python application bc java wasnt working
+	We succsessfully Got the docker file to compile properly
+
+What we need to do
+	Get the docker to recognize the file we upload
+	
+	Start a job from the java program to generate the indicies
+		This is the next 20%
+		We will be at 80%
+
+When done
+	K frequency list
+	highest appearing words
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hadoop jar invertedindex.jar invertedindex https://storage.cloud.google.com/dataproc-staging-us-
+central1-102833165461-2apc7i7n/Hugo/ gs://dataproc-staging-us-central1-102833165461-2apc7i7n/new

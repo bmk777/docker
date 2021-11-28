@@ -6,25 +6,29 @@ public class run {
         Scanner in = new Scanner(System.in);
         // Display the menu
         System.out.println("1\t Locate a file");
+        System.out.println("2\t generate engine");
         System.out.println("2\t Search word");
- 
-
-        //USE SH FILE TO MAKE A FOR LOOP TO CONTINUSOUSLY READ USER INPUT
-        //This is good shithttps://stackoverflow.com/questions/39496017/iterate-in-run-command-in-dockerfile
-       // https://hpc-wiki.info/hpc/Sh-file so is this
-       // https://www.cyberciti.biz/faq/bash-for-loop/#Examples so isx this (examples)
 
         
         //Get user's choice
         int choice = 0;
-        String location;
+        String location = "";
         String word;
         while(choice != -1){
             System.out.println("Please enter your choice:");
+            
             choice = in.nextInt();
+
         //Display the title of the chosen module
         switch (choice) {
             case 1: System.out.println("Locate a file"); 
+                    System.out.println("Enter the location of the directory you would like to interact with");
+                    System.out.println("E.g C:/users/ect/...");
+                    //consume debrees
+                    in.nextLine();
+                    location = in.nextLine();
+                    System.out.println("You entered " + location);
+
                     //System.out.println("Please enter your file choice:");
                     //location = in.nextLine();
 	                break;
@@ -35,5 +39,7 @@ public class run {
             default: System.out.println("Invalid choice");
             }
         }//end of switch
+
+ 
     }//end of the main method
 }//end of class
